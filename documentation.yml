@@ -1,0 +1,28 @@
+# Used by documentation.js tool to organise api docs generation.
+toc:
+  - name: WebSocket interface
+    description: |
+      The web socket API for a client to connect to the SPDZ Proxy. 
+      This is the recommended interface and is more complete.
+      Connect to the socket with  const socket = Io('http://my-domain:8080' + '/spdzapi', {path: '/spdz/socket.io'})
+    children:
+      - connectToSpdz
+      - isSpdzConnected
+      - consumeData
+      - sendData
+      - disconnectFromSpdz
+  - name: REST interface
+    description: |
+      Provides a simple REST interface to connect to a SPDZ engine, write input and read output.
+    children:
+      - restConnectToSpdz
+      - restGetSpdzConnection
+      - restConsumeData
+      - restSendData
+      - restDeleteSpdzConnection
+  - name: Bootstrap interface
+    description: |
+      A websocket interface to allow a client to run SPDZ processes.
+      Connect to the socket with  const socket = Io('http://my-domain:8080' + '/spdzstart', {path: '/spdz/socket.io'})
+    children:
+      - startSpdz

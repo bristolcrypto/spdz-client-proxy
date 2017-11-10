@@ -1,0 +1,55 @@
+{
+  "name": "spdz-client-proxy",
+  "version": "0.1.0",
+  "description": "Run a proxy between an external client and a single SDPZ instance.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --onlyChanged --watch",
+    "start": "node src/index.js",
+    "apidoc": "documentation build src/socket_api/index.js src/rest_api/index.js src/spdz_bootstrap/index.js -f md -o api.md -a public -c documentation.yml"
+  },
+  "jest": {
+    "verbose": true,
+    "modulePaths": [
+      "<rootDir>/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bristolcrypto/spdz-client-proxy.git"
+  },
+  "keywords": [
+    "spdz",
+    "javascript",
+    "uob"
+  ],
+  "author": "bristolcrypto",
+  "license": "SEE LICENSE IN License.txt",
+  "bugs": {
+    "url": "https://github.com/bristolcrypto/spdz-client-proxy/issues"
+  },
+  "homepage": "https://github.com/bristolcrypto/spdz-client-proxy#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "big-integer": "^1.6.22",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "http-status-codes": "^1.1.6",
+    "moment": "^2.18.1",
+    "socket.io": "^2.0.1",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "documentation": "^5.3.3",
+    "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.7.4",
+    "sinon": "^1.17.6",
+    "socket.io-client": "^2.0.4",
+    "supertest": "^2.0.1"
+  }
+}
